@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Tillium";
+    src: url('fonts/TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Tillium";
+    src: url('fonts/TitilliumWeb-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+    font-family: "Tillium",Arial, Helvetica, sans-serif;
+}
+
+#mainGrid{
+    display: grid;
+    max-width:100vw;
+    min-height: 100vh;
+    grid-template-rows: 10% auto auto 10%;
+    grid-template-columns: 20% 1fr;
+    grid-template-areas: 
+    "header header "
+    "sidebar main"
+    "sidebar main"
+    "footer footer";
+}
+.main{
+    grid-area: main;
+}
+
+.sdBar{
+    grid-area: sidebar;
+}
+
+.headr{
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    background-color: blue;
+    transition: background-color 6s;
+}
+
+.headNav{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+.headImg{
+    width: 40%;
+}
+
+
+.footr{
+    grid-area: footer;
+    background-color: blue;
+    transition: background-color 6s;
+}
+
+.footr:hover , .headr:hover{
+    background-color: lightblue;
+
+}
